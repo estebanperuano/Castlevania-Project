@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFICIAL GALLERY - CASTLEVANIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            margin: 0; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        .titulo_seccion { 
+            font-size: 28px; 
+            border-bottom: 3px solid #660000; 
+            margin: 0 auto 30px auto; 
+            padding-bottom: 10px; 
+            width: fit-content; 
+            color: #ffffff; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .galeria-item {
+            width: 100%;
+            height: 220px; 
+            object-fit: cover;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            display: block;
+        }
+
+        .galeria-item:hover {
+            transform: scale(1.05);
+            border-color: #ff4d4d;
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
+        }
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+        }
+
+        #lightbox-img {
+            max-width: 80%;
+            max-height: 80%;
+            border: 2px solid #444;
+            box-shadow: 0 0 30px rgba(255, 77, 77, 0.3);
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            font-family: sans-serif;
+            z-index: 1010;
+        }
+
+        
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffffff; 
+            font-size: 60px;
+            cursor: pointer;
+            user-select: none;
+            padding: 20px;
+            z-index: 1010;
+            text-shadow: 0 0 10px #000;
+            transition: color 0.3s;
+        }
+
+        .arrow:hover {
+            color: #ff4d4d;
+        }
+
+        .arrow-left {
+            left: 20px; 
+        }
+
+        .arrow-right {
+            right: 20px; 
+        }
+
+        @media screen and (max-width: 600px) {
+            .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+            .galeria-item { height: 150px; }
+            .titulo_seccion { font-size: 22px; }
+            .arrow { font-size: 40px; padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titulo_seccion">GALERÍA OFICIAL</div>
+
+    <div class="galeria-grid" id="grid">
+        <script>
+            const grid = document.getElementById('grid');
+            for(let i=1; i<=20; i++) {
+                const img = document.createElement('img');
+                img.src = `galeria${i}.png`;
+                img.alt = `ARTE DE CASTLEVANIA ${i}`;
+                img.className = 'galeria-item';
+                img.loading = 'lazy';
+                img.onclick = () => openLightbox(i);
+                grid.appendChild(img);
+            }
+        </script>
+    </div>
+
+    <div id="lightbox">
+        <span class="btn-close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow arrow-left" onclick="changeImg(-1); event.stopPropagation();">&#10094;</span>
+        <img id="lightbox-img" src="">
+        <span class="arrow arrow-right" onclick="changeImg(1); event.stopPropagation();">&#10095;</span>
+    </div>
+
+    <script>
+        let currentIdx = 1;
+        const totalImages = 20;
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+
+        function openLightbox(n) {
+            currentIdx = n;
+            lb.style.display = 'flex';
+            updateLightbox();
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeLightbox() {
+            lb.style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+
+        function changeImg(n) {
+            currentIdx += n;
+            if (currentIdx > totalImages) currentIdx = 1;
+            if (currentIdx < 1) currentIdx = totalImages;
+            
+            lbImg.style.opacity = '0';
+            setTimeout(() => {
+                updateLightbox();
+                lbImg.style.opacity = '1';
+            }, 150);
+        }
+
+        function updateLightbox() {
+            lbImg.src = `galeria${currentIdx}.png`;
+        }
+
+        lb.onclick = (e) => { if(e.target.id === 'lightbox') closeLightbox(); }
+
+        document.addEventListener('keydown', (e) => {
+            if (lb.style.display === 'flex') {
+                if (e.key === "ArrowLeft") changeImg(-1);
+                if (e.key === "ArrowRight") changeImg(1);
+                if (e.key === "Escape") closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+</html>

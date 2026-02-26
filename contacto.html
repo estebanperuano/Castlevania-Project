@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            margin: 0; 
+            padding: 20px; 
+        }
+        
+        .titulo_seccion { 
+            font-size: 24px; 
+            border-bottom: 2px solid #660000; 
+            margin-bottom: 25px; 
+            padding-bottom: 5px; 
+            width: fit-content; 
+            color: #ffffff; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contenedor_contacto { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            border: 1px solid #222222; 
+            padding: 30px; 
+            background-color: #050505; 
+            box-shadow: 0 0 20px rgba(102, 0, 0, 0.2);
+        }
+
+        .campo { margin-bottom: 20px; }
+
+        label { 
+            display: block; 
+            color: #ff4d4d; 
+            margin-bottom: 8px; 
+            font-size: 18px; 
+            text-transform: uppercase;
+        }
+
+        input[type="text"], input[type="email"], textarea, select { 
+            width: 100%; 
+            padding: 10px; 
+            background-color: #111111; 
+            border: 1px solid #444444; 
+            color: #ffffff; 
+            box-sizing: border-box; 
+            font-family: 'MedievalSharp', cursive; 
+        }
+
+        .opciones_flex { 
+            display: flex; 
+            gap: 15px; 
+            flex-wrap: wrap; 
+            margin-top: 5px; 
+        }
+
+        .opcion_item { 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+            color: #aaaaaa; 
+        }
+
+        button { 
+            background-color: #660000; 
+            color: #ffffff; 
+            border: none; 
+            padding: 12px 25px; 
+            font-family: 'MedievalSharp', cursive; 
+            font-size: 18px; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+            margin-right: 10px; 
+            text-transform: uppercase;
+        }
+
+        button:hover { background-color: #990000; }
+        button[type="reset"] { background-color: #333333; }
+
+        @media (max-width: 1300px) {
+            .contenedor_contacto { max-width: 500px; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .contenedor_contacto { padding: 15px; width: 100%; box-sizing: border-box; }
+            .titulo_seccion { font-size: 20px; margin: 0 auto 25px auto; }
+            button { width: 100%; margin-bottom: 10px; margin-right: 0; }
+            .opciones_flex { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titulo_seccion">Registro de Comunidad / Mi Perfil</div>
+
+    <div class="contenedor_contacto">
+        <form>
+            <div class="campo">
+                <label>Datos Personales</label>
+                <input type="text" name="nombre" placeholder="Nombre de usuario" required style="margin-bottom: 10px;">
+                <input type="email" name="email" placeholder="Correo electrónico (para noticias)" required>
+            </div>
+
+            <div class="campo">
+                <label>Estado de Jugador (Status)</label>
+                <select name="nivel">
+                    <option value="1">Principiante (Jugando por primera vez)</option>
+                    <option value="2">Cazador Veterano (Varios juegos terminados)</option>
+                    <option value="3">Maestro (100% completado en la saga)</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Juegos que has completado</label>
+                <div class="opciones_flex">
+                    <div class="opcion_item"><input type="checkbox" name="juego" value="sotn"> Symphony of the Night</div>
+                    <div class="opcion_item"><input type="checkbox" name="juego" value="aos"> Aria of Sorrow</div>
+                    <div class="opcion_item"><input type="checkbox" name="juego" value="dos"> Dawn of Sorrow</div>
+                    <div class="opcion_item"><input type="checkbox" name="juego" value="otros"> Otros...</div>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Plataforma Principal</label>
+                <div class="opciones_flex">
+                    <div class="opcion_item"><input type="radio" name="consola" value="pc"> PC / Steam</div>
+                    <div class="opcion_item"><input type="radio" name="ps" value="ps"> PlayStation</div>
+                    <div class="opcion_item"><input type="radio" name="consola" value="xbox"> Xbox</div>
+                    <div class="opcion_item"><input type="radio" name="consola" value="nintendo"> Nintendo</div>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Sobre ti / Comentarios</label>
+                <textarea rows="4" name="mensaje" placeholder="Cuéntanos sobre tu experiencia con la saga o deja un mensaje..."></textarea>
+            </div>
+
+            <div class="campo">
+                <button type="submit">Guardar Perfil / Registrarse</button>
+                <button type="reset">Borrar Datos</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            margin: 0; 
+            padding: 20px; 
+        }
+
+        .titulo_seccion { 
+            font-size: 24px; 
+            border-bottom: 2px solid #660000; 
+            margin-bottom: 25px; 
+            padding-bottom: 5px; 
+            width: fit-content; 
+            color: #ffffff; 
+            text-transform: uppercase;
+        }
+        
+        .intro_texto { 
+            margin-bottom: 35px; 
+            line-height: 1.8; 
+            font-family: 'MedievalSharp', cursive; 
+            max-width: 800px;
+            text-align: justify;
+        }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-bottom: 30px; 
+            background-color: transparent; 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        td { 
+            padding: 0; 
+            border-bottom: 1px solid #222; 
+            transition: none; 
+        }
+
+        
+        td:hover { 
+            background-color: transparent; 
+            border-left: none;
+        }
+        
+        .enlace_celda { 
+            display: flex; 
+            flex-direction: column;
+            padding: 25px; 
+            text-decoration: none; 
+            color: inherit; 
+        }
+        
+        .nombre_opcion { 
+            color: #ff4d4d; 
+            font-size: 20px; 
+            text-decoration: none; 
+            margin-bottom: 8px; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        
+        td:hover .nombre_opcion {
+            text-decoration: none;
+        }
+
+        .descripcion_opcion { 
+            color: #aaaaaa; 
+            font-size: 15px; 
+            font-family: 'MedievalSharp', cursive; 
+        }
+
+        @media (max-width: 1300px) {
+            .intro_texto { max-width: 95%; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            .titulo_seccion { font-size: 22px; width: 100%; text-align: center; }
+            .enlace_celda { padding: 20px 15px; }
+            .nombre_opcion { font-size: 18px; }
+            .descripcion_opcion { font-size: 13px; line-height: 1.4; }
+            .intro_texto { font-size: 14px; margin-bottom: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titulo_seccion">Historia y Mitología</div>
+    
+    <div class="intro_texto">
+        La sección de historia detalla los diversos aspectos de Castlevania influenciados por la historia del mundo y la mitología. Las armas y enemigos de este juego están influenciados por una variedad de folclore, religiones y mitos que se remontan a siglos atrás, demostrando la increíble riqueza cultural detrás de cada título de la saga.
+    </div>
+
+    <table>
+        <tbody>
+            <tr><td><a href="weapon_origins.html" target="pantalla_carga" class="enlace_celda"><span class="nombre_opcion">Orígenes de las Armas</span><span class="descripcion_opcion">Un vistazo a los orígenes reales y mitológicos de las armas de Symphony of the Night, Aria of Sorrow y más allá.</span></a></td></tr>
+            <tr><td><a href="monster_origins.html" target="pantalla_carga" class="enlace_celda"><span class="nombre_opcion">Orígenes de los Monstruos</span><span class="descripcion_opcion">Una lista detallada de las criaturas mitológicas y de leyendas urbanas que aparecen en la serie.</span></a></td></tr>
+            <tr><td><a href="dss_card_origins.html" target="pantalla_carga" class="enlace_celda"><span class="nombre_opcion">Orígenes de las Cartas DSS</span><span class="descripcion_opcion">Análisis de las cartas de Circle of the Moon basadas en dioses romanos y entidades astrológicas.</span></a></td></tr>
+            <tr><td><a href="real_life_castles.html" target="pantalla_carga" class="enlace_celda"><span class="nombre_opcion">Castillos de la Vida Real</span><span class="descripcion_opcion">Explora los monumentos y castillos europeos auténticos que inspiraron el arte de los escenarios.</span></a></td></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

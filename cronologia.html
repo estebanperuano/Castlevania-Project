@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cronología de Castlevania</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            margin: 0; 
+            padding: 40px; 
+            line-height: 1.6;
+        }
+        .contenedor_cronologia { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background-color: rgba(5, 5, 5, 0.9); 
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        }
+        .titulo_principal { 
+            font-size: 32px; 
+            color: #ff4d4d; 
+            border-bottom: 2px solid #660000; 
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .introduccion_principal {
+            margin-bottom: 40px;
+            text-align: justify;
+            color: #eeeeee;
+            border-bottom: 1px solid #222;
+            padding-bottom: 20px;
+        }
+        .entrada {
+            margin-bottom: 40px;
+            border-left: 3px solid #660000;
+            padding-left: 20px;
+            position: relative;
+        }
+        .entrada::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            background: #660000;
+            border-radius: 50%;
+        }
+        .año_titulo { 
+            color: #ff4d4d; 
+            font-size: 20px; 
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .descripcion { 
+            text-align: justify;
+            font-size: 15px;
+            color: #bbbbbb;
+        }
+        .no-canonico {
+            color: #ffff00;
+            font-size: 13px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        p { margin-bottom: 15px; }
+
+        /* media queries */
+        @media (max-width: 1300px) {
+            .contenedor_cronologia { max-width: 95%; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            .contenedor_cronologia { padding: 20px; }
+            .titulo_principal { font-size: 24px; }
+            .año_titulo { font-size: 18px; }
+            .descripcion, .introduccion_principal { text-align: left; font-size: 14px; }
+            .entrada { padding-left: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor_cronologia">
+        <h1 class="titulo_principal">Cronología de Castlevania</h1>
+
+        <div class="introduccion_principal">
+            <p>Desde el principio, Castlevania ha sido una mezcla de las películas de terror clásicas, poniendo al Conde Drácula a la cabeza del grupo y haciendo que otros monstruos sirvan como jefes (Frankenstein, la Momia, etc.). Los vampiros han sido parte de la tradición y las leyendas a lo largo de la historia. Sin embargo, se hicieron populares por primera vez a través del Drácula de Bram Stoker, escrito en 1897. Pero, ¿qué tan bien encaja la historia de Bram Stoker en el linaje de Castlevania?</p>
+            <p>Ten en cuenta que la cronología de Castlevania es muy inconsistente. Hay algunas lagunas: por un lado, el manual de instrucciones americano de Castlevania 3 establece específicamente que las aventuras de Trevor tienen lugar 100 años antes que las de Simon, mientras que la versión oficial japonesa tiene a Christopher siguiendo la aventura de Trevor. Esto probablemente fue una mala traducción. Además, las fechas de resurrección no siempre son exactamente de 100 años, pero esto puede ser aceptable.</p>
+            <p>También hay cierta confusión sobre los juegos protagonizados por Simon Belmont. Para todos los efectos, Vampire Killer de MSX, Castlevania de NES, Super Castlevania IV de SNES, Haunted Castle de arcade y Castlevania Chronicles de X68000/PSX son solo versiones diferentes de la misma historia. Por naturaleza, los vampiros deben beber sangre de otros para sobrevivir. El látigo Vampire Killer está bendecido con un poder especial que permite a los Belmont destruir a las criaturas de la noche.</p>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1094 - Castlevania: Lament of Innocence</span>
+            <div class="descripcion">Esta es la piedra angular de la leyenda. Leon Belmont, un caballero de las cruzadas, renuncia a su título para rescatar a su prometida Sara de un castillo gobernado por el vampiro Walter Bernhard. Tras un sacrificio desgarrador, el alma de Sara se funde con un látigo de alquimia para crear el "Vampire Killer". Leon derrota al mal, pero presencia el nacimiento de Drácula a través de la traición de su mejor amigo, Mathias Cronqvist.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="no-canonico">Juego No Canónico</span>
+            <span class="año_titulo">1450 - Castlevania: Legends</span>
+            <div class="descripcion">Sonia Belmont es la primera mujer de la familia en portar el látigo sagrado. En esta aventura, ella une fuerzas con el propio Alucard para detener los primeros avances de Drácula. Aunque logra vencerlo, el miedo de la gente hacia sus poderes sobrenaturales provoca que el clan Belmont sea exiliado.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1476 - Castlevania 3: Dracula's Curse</span>
+            <div class="descripcion">Trevor Belmont es el encargado de responder al llamado. En su viaje, recluta a la mística Sypha Belnades, al pirata Grant DaNasty y al hijo renegado de Drácula, Alucard. Juntos logran la primera gran victoria sobre el Conde.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1479 - Castlevania: Curse of Darkness</span>
+            <div class="descripcion">Hector, un antiguo Maestro Forjador de Almas que servía al Conde, huye para vivir en paz, pero regresa para buscar venganza contra Isaac. Hector debe colaborar con Trevor Belmont para evitar que la esencia de Drácula regrese.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1576 - The Castlevania Adventure</span>
+            <div class="descripcion">Drácula despierta de su letargo un siglo después. Christopher Belmont entra en el castillo para enfrentarse a la oscuridad. Tras una batalla feroz, Drácula parece ser derrotado, pero escapa transformado en niebla.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1591 - Castlevania 2: Belmont's Revenge</span>
+            <div class="descripcion">Quince años después de su huida, Drácula reaparece y secuestra a Soleiyu, el hijo de Christopher Belmont. Drácula posee el cuerpo del joven. Christopher debe luchar contra su propio hijo para liberarlo.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1691 - Castlevania</span>
+            <div class="descripcion">Simon Belmont, el cazador más icónico del clan, entra solo en el castillo de Drácula. Simon atraviesa hordas de monstruos hasta llegar a la torre. Logra derrotar al Conde, pero Drácula le lanza una maldición mortal.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1698 - Castlevania 2: Simon's Quest</span>
+            <div class="descripcion">Simon descubre que la única forma de romper su maldición es reuniendo las cinco partes del cuerpo de Drácula. Simon debe resucitar al Conde y destruirlo una vez más para purificar su propia sangre.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1748 - Castlevania: Harmony of Dissonance</span>
+            <div class="descripcion">Juste Belmont, nieto de Simon, debe rescatar a su amiga de la infancia, Lydie. Juste descubre que el castillo existe en dos realidades paralelas y debe enfrentarse a su mejor amigo corrompido, Maxim.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1792 - Dracula X: Rondo of Blood</span>
+            <div class="descripcion">Richter Belmont se enfrenta a una de las resurrecciones más agresivas. Richter demuestra una agilidad sin precedentes y logra rescatar a Annette y Maria Renard.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1797 - Castlevania: Symphony of the Night</span>
+            <div class="descripcion">Richter desaparece y el castillo reaparece antes de tiempo. Alucard despierta y descubre que Richter está bajo control mental. Tras la batalla, el látigo Vampire Killer desaparece del clan Belmont.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="no-canonico">Juego No Canónico</span>
+            <span class="año_titulo">1830 - Castlevania: Circle of the Moon</span>
+            <div class="descripcion">Nathan Graves debe rescatar a su mentor de las manos de Carmilla. Utiliza un sistema de cartas mágicas único para obtener poderes elementales.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">18?? - Castlevania: Order of Ecclesia</span>
+            <div class="descripcion">Shanoa, una guerrera de la Orden de Ecclesia, es elegida para portar los "Glifos" más poderosos. Descubre una conspiración interna y debe derrotar al Señor Oscuro.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1897 - Bram Stoker's Dracula</span>
+            <div class="descripcion">Quincey Morris logra clavar su cuchillo en el pecho de Drácula sacrificando su vida. Su hijo, John Morris, observa el sacrificio heredando la responsabilidad.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1917 - Castlevania Bloodlines</span>
+            <div class="descripcion">Durante la Primera Guerra Mundial, John Morris y Eric Lecarde viajan por toda Europa deteniendo a Elizabeth Bartley. El uso del látigo consume la energía vital de John.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1944 - Castlevania: Portrait of Ruin</span>
+            <div class="descripcion">Jonathan Morris y la bruja Charlotte Aulin entran en pinturas mágicas para detener al pintor vampiro Brauner. Jonathan libera el verdadero poder del Vampire Killer.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">1999 - The Demon Castle Wars</span>
+            <div class="descripcion">Julius Belmont derrota a Drácula definitivamente y sella el castillo dentro de un eclipse solar total, terminando con el ciclo de resurrecciones.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">2035 - Castlevania: Aria of Sorrow</span>
+            <div class="descripcion">Soma Cruz descubre que él es la reencarnación del alma de Drácula dentro del eclipse, pero decide rechazar su destino oscuro para seguir siendo humano.</div>
+        </div>
+
+        <div class="entrada">
+            <span class="año_titulo">2036 - Castlevania: Dawn of Sorrow</span>
+            <div class="descripcion">Un culto liderado por Celia Fortner intenta forzar el nacimiento de un nuevo Señor Oscuro. Soma demuestra que la humanidad es libre de elegir su destino.</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

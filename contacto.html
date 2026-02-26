@@ -83,6 +83,23 @@
         button:hover { background-color: #990000; }
         button[type="reset"] { background-color: #333333; }
 
+        /* Estilo para el nuevo apartado de contacto */
+        .contacto_konami {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        .contacto_konami a {
+            color: #ff4d4d;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contacto_konami a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 1300px) {
             .contenedor_contacto { max-width: 500px; }
         }
@@ -131,7 +148,7 @@
                 <label>Plataforma Principal</label>
                 <div class="opciones_flex">
                     <div class="opcion_item"><input type="radio" name="consola" value="pc"> PC / Steam</div>
-                    <div class="opcion_item"><input type="radio" name="ps" value="ps"> PlayStation</div>
+                    <div class="opcion_item"><input type="radio" name="consola" value="ps"> PlayStation</div>
                     <div class="opcion_item"><input type="radio" name="consola" value="xbox"> Xbox</div>
                     <div class="opcion_item"><input type="radio" name="consola" value="nintendo"> Nintendo</div>
                 </div>
@@ -147,6 +164,13 @@
                 <button type="reset">Borrar Datos</button>
             </div>
         </form>
+    </div>
+
+    <div class="contacto_konami">
+        <p>Contáctanos en Konami: 
+            <a href="mailto:konami_support@gmail.com">konami_support@gmail.com</a> | 
+            <a href="https://instagram.com/konami" target="_blank">@konami</a>
+        </p>
     </div>
 
 </body>

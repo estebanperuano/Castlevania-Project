@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castlevania Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #000000; color: #ffffff; font-family: 'MedievalSharp', cursive; margin: 0; overflow-x: hidden; }
+        
+        #contenedor_principal { width: 100%; display: flex; flex-direction: column; height: 100vh; }
+        
+        #cabecera { 
+            background-color: #000000; 
+            border-bottom: 2px solid #333333; 
+            padding: 25px; 
+            flex-shrink: 0; 
+        }
+
+       
+        .titulo_proyecto { 
+            font-size: 38px; 
+            color: #ff4d4d; 
+            letter-spacing: 3px; 
+            text-shadow: 0px 0px 15px #ff0000, 2px 2px 0px #000000; 
+            cursor: pointer; 
+            width: fit-content;
+        }
+
+        #cuerpo { display: flex; flex-grow: 1; overflow: hidden; }
+        #barra_lateral_izquierda { width: 180px; background-color: #0b0b0b; padding: 30px 15px; border-right: 1px solid #222222; flex-shrink: 0; overflow-y: auto; }
+        #contenido_central { flex-grow: 1; background-color: #000000; position: relative; overflow-y: auto; }
+        
+        #mensaje_inicio { padding: 20px; color: #cccccc; }
+        .titulo_seccion { font-size: 22px; border-bottom: 2px solid #660000; margin-bottom: 20px; padding-bottom: 5px; width: fit-content; color: #ffffff; margin-top: 30px; }
+        .subtitulo_historia { color: #ff4d4d; font-size: 18px; margin-bottom: 10px; margin-top: 20px; font-weight: bold; }
+        .texto_bloque { line-height: 1.6; text-align: justify; margin-bottom: 25px; max-width: 850px; font-size: 16px; }
+
+       
+        .carrusel_contenedor { position: relative; max-width: 700px; margin: 20px 0; overflow: hidden; border: 2px solid #333; box-shadow: 0 0 20px rgba(102, 0, 0, 0.5); }
+        .carrusel_slides { display: flex; width: calc(700px * 10); animation: desplazamientoContinuo 30s linear infinite; }
+        .slide { width: 700px; position: relative; flex-shrink: 0; }
+        .slide img { width: 100%; display: block; filter: brightness(0.8); }
+        .noticia_texto { position: absolute; bottom: 0; background: rgba(0, 0, 0, 0.8); color: #fff; width: 100%; padding: 15px; font-size: 15px; border-top: 1px solid #660000; }
+
+        @keyframes desplazamientoContinuo {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-700px * 5)); }
+        }
+
+        #pantalla_carga { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; background-color: #000000; display: none; }
+        
+        
+        .menu_link { 
+            display: block; 
+            color: #cccccc; 
+            text-decoration: none; 
+            margin-bottom: 20px; 
+            font-size: 19px; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        }
+
+        .menu_link:hover { 
+            color: #ffffff; 
+            text-shadow: 0px 0px 10px #ffffff, 0px 0px 20px #ffffff; 
+            padding-left: 10px; 
+        }
+
+       
+        @media (max-width: 1300px) {
+            #barra_lateral_izquierda { width: 160px; }
+            .carrusel_contenedor { max-width: 90%; margin: 20px auto; }
+        }
+
+        @media (max-width: 600px) {
+            #cuerpo { flex-direction: column; overflow: visible; } 
+            #barra_lateral_izquierda { 
+                width: 100%; 
+                border-right: none; 
+                border-bottom: 1px solid #222;
+                display: flex; 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                gap: 15px; 
+                padding: 15px 0; 
+                box-sizing: border-box;
+            }
+            .menu_link { margin-bottom: 0; font-size: 16px; }
+            #cabecera { padding: 15px; text-align: center; }
+            .titulo_proyecto { font-size: 24px; margin: 0 auto; letter-spacing: 1px; }
+            .carrusel_contenedor { width: 95%; max-width: 100%; margin: 20px auto; }
+            .slide { width: 100vw; }
+            .carrusel_slides { width: calc(100vw * 10); animation: desplazamientoMovil 25s linear infinite; }
+            .noticia_texto { font-size: 13px; padding: 10px; }
+            @keyframes desplazamientoMovil {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-100vw * 5)); }
+            }
+            .texto_bloque { font-size: 14px; text-align: left; }
+            #mensaje_inicio { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor_principal">
+        <header id="cabecera">
+            <div class="titulo_proyecto" onclick="irAlInicio()">Castlevania Project</div>
+        </header>
+        <div id="cuerpo">
+            <nav id="barra_lateral_izquierda">
+                <a onclick="cargarYGuardar('cronologia.html')" class="menu_link">Cronología</a>
+                <a onclick="cargarYGuardar('the_belmonts.html')" class="menu_link">The Belmonts</a>
+                <a onclick="cargarYGuardar('historia.html')" class="menu_link">Historia</a>
+                <a onclick="cargarYGuardar('videojuegos.html')" class="menu_link">Videojuegos</a>
+                <a onclick="cargarYGuardar('galeria.html')" class="menu_link">Galería</a>
+                <a onclick="cargarYGuardar('series_animadas.html')" class="menu_link">Series Animadas</a>
+                <a onclick="cargarYGuardar('contacto.html')" class="menu_link">Contacto</a>
+            </nav>
+            <main id="contenido_central">
+                <div id="mensaje_inicio">
+                    <div class="titulo_seccion">Bienvenido al Proyecto Castlevania</div>
+                    
+                    <div class="carrusel_contenedor">
+                        <div class="carrusel_slides">
+                            <div class="slide"><img src="vampire survivors.jpg"><div class="noticia_texto">Novedades sobre la colaboración Ode to Castlevania en Vampire Survivors</div></div>
+                            <div class="slide"><img src="belmont's curse.jpg"><div class="noticia_texto">Estado actual del desarrollo del proyecto Belmont's Curse</div></div>
+                            <div class="slide"><img src="dead by daylight.jpg"><div class="noticia_texto">Alucard y Drácula se incorporan al elenco de Dead by Daylight</div></div>
+                            <div class="slide"><img src="dominus collection.jpg"><div class="noticia_texto">La colección Dominus ya se encuentra disponible en consolas y PC</div></div>
+                            <div class="slide"><img src="nocturne.jpg"><div class="noticia_texto">Novedades sobre la serie Castlevania Nocturne en Netflix</div></div>
+                            <div class="slide"><img src="vampire survivors.jpg"><div class="noticia_texto">Novedades sobre la colaboración Ode to Castlevania en Vampire Survivors</div></div>
+                            <div class="slide"><img src="belmont's curse.jpg"><div class="noticia_texto">Estado actual del desarrollo del proyecto Belmont's Curse</div></div>
+                            <div class="slide"><img src="dead by daylight.jpg"><div class="noticia_texto">Alucard y Drácula se incorporan al elenco de Dead by Daylight</div></div>
+                            <div class="slide"><img src="dominus collection.jpg"><div class="noticia_texto">La colección Dominus ya se encuentra disponible en consolas y PC</div></div>
+                            <div class="slide"><img src="nocturne.jpg"><div class="noticia_texto">Novedades sobre la serie Castlevania Nocturne en Netflix</div></div>
+                        </div>
+                    </div>
+
+                    <div class="titulo_seccion">Historia de la saga</div>
+                    <div class="subtitulo_historia">¿Cómo se creó Castlevania?</div>
+                    <div class="texto_bloque">
+                        La saga Castlevania fue creada por Hitoshi Akamatsu y lanzada por Konami en 1986. Inspirado por las clásicas películas de terror de Universal Studios y Hammer Film Productions, Akamatsu quería crear una experiencia cinematográfica en la consola Famicom. Originalmente concebido como un juego de acción lineal, Castlevania logró capturar la atmósfera gótica con su banda sonora inolvidable y su dificultad desafiante. El protagonista, Simon Belmont, se convirtió en un icono cultural al empuñar el látigo "Vampire Killer" para enfrentar al Conde Drácula en su castillo maldito.
+                    </div>
+
+                    <div class="titulo_seccion">Sobre la compañía</div>
+                    <div class="subtitulo_historia">La historia de Konami</div>
+                    <div class="texto_bloque">
+                        Konami fue fundada en 1969 en Osaka, Japón, por Kagemasa Kozuki. Originalmente, el negocio se centraba en la reparación y el alquiler de máquinas de discos (jukebox). No fue hasta la década de los 70 que comenzaron a expandirse hacia el desarrollo de máquinas recreativas de arcade. El nombre "Konami" es una conjunción de los apellidos Kozuki, Nakajima y Matsuda, los socios clave que impulsaron a la empresa hacia el éxito internacional y la convirtieron en un gigante de la industria de los videojuegos.
+                    </div>
+                </div>
+                <iframe name="pantalla_carga" id="pantalla_carga" src=""></iframe>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function cargarYGuardar(url) {
+            const iframe = document.getElementById('pantalla_carga');
+            const inicio = document.getElementById('mensaje_inicio');
+            iframe.src = url;
+            iframe.style.display = 'block'; 
+            inicio.style.display = 'none';   
+            sessionStorage.setItem('paginaSesion', url);
+        }
+
+        function irAlInicio() {
+            const iframe = document.getElementById('pantalla_carga');
+            const inicio = document.getElementById('mensaje_inicio');
+            iframe.src = '';
+            iframe.style.display = 'none'; 
+            inicio.style.display = 'block'; 
+            sessionStorage.removeItem('paginaSesion');
+        }
+
+        window.onload = function() {
+            const guardado = sessionStorage.getItem('paginaSesion');
+            if (guardado) {
+                cargarYGuardar(guardado);
+            } else {
+                irAlInicio();
+            }
+        };
+    </script>
+</body>
+</html>

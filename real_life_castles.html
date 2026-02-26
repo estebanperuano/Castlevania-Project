@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            padding: 25px; 
+            margin: 0;
+        }
+        table { width: 100%; border-collapse: collapse; max-width: 900px; margin: 0 auto; }
+        td { padding: 35px 20px; border-bottom: 1px solid #222; vertical-align: top; }
+        
+        .nombre { 
+            color: #ff4d4d; 
+            font-size: 22px; 
+            display: block; 
+            text-decoration: underline; 
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-family: 'MedievalSharp', cursive;
+        }
+        .desc { 
+            line-height: 1.8; 
+            font-family: 'MedievalSharp', cursive; 
+            text-align: justify;
+            font-size: 16px;
+            color: #bbbbbb;
+        }
+        
+        
+        .castle-img { 
+            max-width: 250px; 
+            display: block; 
+            margin-top: 20px; 
+            border: 1px solid #444;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .castle-img:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            
+            td { 
+                padding: 25px 10px; 
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+            }
+
+            .nombre { 
+                text-align: center; 
+                font-size: 19px; 
+                width: 100%;
+            }
+
+            .desc { 
+                font-size: 14px; 
+                text-align: left; 
+                line-height: 1.6;
+            }
+
+            .castle-img { 
+                max-width: 100%; 
+                height: auto; 
+                margin: 20px auto 0 auto; 
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="nombre">Castle Neuschwanstein, Germany</span>
+                    <div class="desc">Sirvió como modelo para la portada del álbum "Dracula Perfect Selection" y para la introducción de Symphony of the Night. Fue construido por el carismático y algo excéntrico Rey Luis II de Baviera a finales del siglo XIX como un refugio de soledad social. Abierto al público tras su muerte, este castillo de cuento de hadas es una de las estructuras más icónicas de Europa y ha inspirado numerosas obras de ficción.</div>
+                    <img src="rc1.png" class="castle-img">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="nombre">Mont Saint Michel, France</span>
+                    <div class="desc">Este impresionante castillo sobre una isla aparece en la portada japonesa de Castlevania 3 (Akumajou Densetsu) y en la portada americana de Symphony of the Night, además de inspirar el diseño de los juegos de Nintendo 64. Sus cimientos datan del año 708, nombrado en honor a San Miguel tras aparecerse en sueños al Obispo de Avranches. Es una joya de la arquitectura medieval protegida por las mareas.</div>
+                    <img src="rc2.png" class="castle-img">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="nombre">Alcázar, Spain</span>
+                    <div class="desc">Utilizado en los manuales de Akumajou Dracula X68000 y el Nocturne in the Moonlight japonés. Curiosamente, también sirvió de base para el castillo de Blancanieves de Disney. Originalmente una fortaleza romana, el Alcázar de Segovia ha sido palacio real, sede de bodas reales y academia militar. Tras un incendio en 1862, fue reconstruido con un estilo más romántico, destacando sus techos de pizarra y agujas puntiagudas.</div>
+                    <img src="rc3.png" class="castle-img">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="nombre">Bran Castle, Romania</span>
+                    <div class="desc">Famoso mundialmente por su conexión con el mito de Drácula, aparece en el fondo de las portadas de Dracula X (PC Engine y SNES). Fue originalmente una fortaleza construida por los Caballeros Teutónicos en 1212. A lo largo de los siglos sirvió como defensa contra los turcos y puesto aduanero entre Transilvania y Valaquia. Desde 1920 fue residencia real y hoy funciona como un museo dedicado al arte medieval.</div>
+                    <img src="rc4.png" class="castle-img">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="nombre">Castle Cagliostro</span>
+                    <div class="desc">Aunque no es un castillo real, esta edificación proviene de la famosa película de animación de Hayao Miyazaki "Lupin III: El Castillo de Cagliostro". Su arquitectura compleja y sus ingeniosas trampas parecen haber inspirado directamente los gráficos y el diseño de niveles internos de la versión de Dracula X para Super Nintendo, influyendo en la estética gótica y mecánica de la saga.</div>
+                    <img src="rc5.png" class="castle-img">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="nombre">Katz Castle, Germany</span>
+                    <div class="desc">Es el castillo que se observa al fondo del nivel 4 (Alemania) en Castlevania Bloodlines. Se erige como una corona en la ladera sobre St. Goarshausen. Construido por el Conde Johann de Katzenelbogen a finales del siglo XIV, fue destruido en 1804 y restaurado un siglo después. Actualmente es de propiedad privada y es conocido por ofrecer una de las mejores vistas del río Rin, especialmente hacia la roca Loreley.</div>
+                    <img src="rc6.png" class="castle-img">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+</html>

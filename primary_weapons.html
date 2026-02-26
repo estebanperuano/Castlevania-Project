@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arsenal - Armas Primarias</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            padding: 25px; 
+            line-height: 1.6;
+        }
+
+        .navegacion_interna {
+            margin-bottom: 30px;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 5px 15px;
+            transition: 0.3s;
+        }
+
+        .tab.activo {
+            color: #ffb300;
+            pointer-events: none;
+            border-bottom: 2px solid #ffb300;
+        }
+
+        .tab.inactivo {
+            color: #ff4d4d;
+            text-decoration: underline;
+        }
+
+        .tab.inactivo:hover {
+            color: #ffffff;
+        }
+
+        .pagina_contenido {
+            display: none;
+        }
+
+        .pagina_contenido.visible {
+            display: block;
+        }
+
+        .nombre { 
+            color: #ff4d4d; 
+            font-size: 20px; 
+            display: block; 
+            margin-top: 25px; 
+            text-decoration: underline; 
+            text-transform: uppercase;
+        }
+
+        .desc { 
+            margin: 10px 0 20px 15px; 
+            text-align: justify;
+            border-left: 2px solid #660000; 
+            padding-left: 15px;
+            color: #dddddd;
+        }
+
+        strong { color: #ffffff; }
+    </style>
+</head>
+<body>
+
+    <div class="navegacion_interna">
+        <span id="btn_pag1" class="tab activo" onclick="cambiarPagina(1)">Página 1</span>
+        <span style="color: #666;"> | </span>
+        <span id="btn_pag2" class="tab inactivo" onclick="cambiarPagina(2)">Página 2</span>
+    </div>
+
+    <div id="pag1" class="pagina_contenido visible">
+        <span class="nombre">El Látigo (The Whip)</span>
+        <div class="desc">
+            El látigo <strong>Vampire Killer</strong> es el arma convencional de todos los Belmont. Comienza como un látigo de cuero bastante débil, pero con mejoras se transforma en un látigo de cadena y finalmente en su forma más potente. En los juegos originales de Gameboy, este disparará pequeñas bolas de fuego. En Super Castlevania 4, puedes mantener presionado el botón y girar el látigo para bloquear proyectiles. En Bloodlines, puedes potenciarlo hasta convertirlo en un látigo sagrado eléctrico.
+        </div>
+
+        <span class="nombre">Aguena</span>
+        <div class="desc">
+            Un arma extraña y rara que solo se encuentra en Symphony of the Night. Es un cristal diminuto que lanzas directamente hacia adelante; si golpea a un enemigo y mantienes el botón, un rayo lo impactará. Consume corazones muy rápido. Su <strong>Item Crash</strong> envía rayos por toda la pantalla.
+        </div>
+
+        <span class="nombre">Hacha (Axe)</span>
+        <div class="desc">
+            Se lanza en arco y es muy valiosa contra muchos jefes. El <strong>Item Crash</strong> lanza hachas en círculos. En Bloodlines, tres hachas flotan en el aire por un segundo y luego vuelan hacia adelante.
+        </div>
+
+        <span class="nombre">Biblia (Bible)</span>
+        <div class="desc">
+            Apareció en Dracula X y gira alrededor de Richter. En Symphony of the Night actúa como un escudo cercano. Su <strong>Item Crash</strong> lanza páginas que circulan por la pantalla; en Symphony, estas generan un rayo de energía gigantesco.
+        </div>
+
+        <span class="nombre">Bibuti</span>
+        <div class="desc">
+            Cenizas sagradas de la India. Se lanzan frente a ti y permanecen esparcidas en el suelo durante unos segundos, dañando a cualquier cosa que camine sobre ellas. Su <strong>Item Crash</strong> crea una nube de humo sagrado sobre Richter.
+        </div>
+        
+        <span class="nombre">Cruz (Cross)</span>
+        <div class="desc">El bumerán lento pero extremadamente poderoso. Su crash invoca un crucifijo gigante.</div>
+        <span class="nombre">Daga (Dagger)</span>
+        <div class="desc">Rápida pero débil. Richter lanza tres a la vez. Su crash es una ráfaga masiva.</div>
+        <span class="nombre">Puño Sagrado (Holy Fist)</span>
+        <div class="desc">Ráfaga de puñetazos de Juste Belmont.</div>
+        <span class="nombre">Agua Bendita (Holy Water)</span>
+        <div class="desc">Crea llamas sagradas en el suelo. Muy eficaz contra jefes.</div>
+        <span class="nombre">Cristal de Rebote (Rebound Crystal)</span>
+        <div class="desc">Rebota en paredes y suelos causando daño táctico.</div>
+        <span class="nombre">Reloj de Arena (Stop Watch)</span>
+        <div class="desc">Detiene el tiempo para los enemigos durante cinco segundos.</div>
+    </div>
+
+    <div id="pag2" class="pagina_contenido">
+        <span class="nombre">Cruz (Cross)</span>
+        <div class="desc">
+            Conocida como "Bumerán" en versiones tempranas. En la serie Dracula X el rango disminuyó ligeramente pero es extremadamente poderosa. El <strong>Item Crash</strong> en Symphony of the Night ataca en una columna vertical recta. Alucard no puede usarla como bumerán, solo para este ataque especial.
+        </div>
+
+        <span class="nombre">Daga (Dagger)</span>
+        <div class="desc">
+            Suele ser la sub-arma más débil. En Dracula X, Richter lanza tres al mismo tiempo. El <strong>Item Crash</strong> lanza una ráfaga masiva hacia adelante; en Symphony este ataque puede durar hasta diez segundos de daño continuo.
+        </div>
+
+        <span class="nombre">Puño Sagrado (Holy Fist)</span>
+        <div class="desc">
+            Solo disponible en Harmony of Dissonance. Juste golpea rápidamente durante unos segundos. Es algo lento y deja al usuario vulnerable ante contraataques.
+        </div>
+
+        <span class="nombre">Agua Bendita (Holy Water)</span>
+        <div class="desc">
+            Causa quemaduras sagradas en el suelo. En Dracula X las llamas se mueven. Su <strong>Item Crash</strong> provoca una lluvia sagrada que golpea a todos los enemigos presentes en la pantalla.
+        </div>
+
+        <span class="nombre">Cristal de Rebote (Rebound Crystal)</span>
+        <div class="desc">
+            Rebotará en suelos y paredes causando daño. En Symphony es más pequeño y menos potente. El <strong>Item Crash</strong> explota en la parte superior de la pantalla, dañando a todos.
+        </div>
+
+        <span class="nombre">Reloj de Arena (Stop Watch)</span>
+        <div class="desc">
+            Detiene a los enemigos. En Dracula X solo los ralentiza. Como <strong>Item Crash</strong>, los pentagramas que aparecen para la cuenta atrás atacarán mientras el efecto esté activo. En Aria of Sorrow crea un efecto de color negativo.
+        </div>
+    </div>
+
+    <script>
+        function cambiarPagina(num) {
+            document.getElementById('pag1').classList.remove('visible');
+            document.getElementById('pag2').classList.remove('visible');
+            
+            document.getElementById('btn_pag1').className = 'tab inactivo';
+            document.getElementById('btn_pag2').className = 'tab inactivo';
+
+            if(num === 1) {
+                document.getElementById('pag1').classList.add('visible');
+                document.getElementById('btn_pag1').className = 'tab activo';
+            } else {
+                document.getElementById('pag2').classList.add('visible');
+                document.getElementById('btn_pag2').className = 'tab activo';
+            }
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>

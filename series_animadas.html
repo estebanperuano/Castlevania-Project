@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERIES - CASTLEVANIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #cccccc; 
+            font-family: 'MedievalSharp', cursive; 
+            margin: 0; 
+            padding: 20px; 
+        }
+        
+        .titulo_seccion { 
+            font-size: 24px; 
+            border-bottom: 2px solid #660000; 
+            margin-bottom: 30px; 
+            padding-bottom: 5px; 
+            width: fit-content; 
+            color: #ffffff; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contenedor_serie { 
+            display: flex; 
+            gap: 25px; 
+            align-items: flex-start; 
+            margin-bottom: 50px; 
+            background: #050505; 
+            padding: 20px; 
+            border: 1px solid #222; 
+            border-left: 4px solid #660000;
+        }
+
+        .img_serie { 
+            width: 200px; 
+            height: auto; 
+            border: 1px solid #444; 
+            box-shadow: 0 0 15px rgba(102, 0, 0, 0.4);
+            flex-shrink: 0;
+        }
+
+        .info_serie {
+            flex-grow: 1;
+        }
+
+        .nombre_serie {
+            font-size: 22px;
+            color: #ff4d4d;
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .texto_descriptivo {
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .detalles_tecnicos {
+            font-size: 14px;
+            color: #888;
+            border-top: 1px solid #222;
+            padding-top: 10px;
+            text-transform: none;
+        }
+
+        .etiqueta_bold {
+            color: #bbbbbb;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .contenedor_serie { 
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center; 
+            }
+            .img_serie { 
+                width: 100%; 
+                max-width: 250px; 
+            }
+            .titulo_seccion {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titulo_seccion">Series Animadas De La Saga</div>
+
+    <div class="contenedor_serie">
+        <img src="sa1.png" class="img_serie" alt="CASTLEVANIA NETFLIX">
+        <div class="info_serie">
+            <span class="nombre_serie">Castlevania</span>
+            <div class="texto_descriptivo">
+                Inspirada principalmente en el videojuego Castlevania III: Dracula's Curse, esta producción narra la épica lucha de Trevor Belmont contra las fuerzas del mal. Tras la injusta ejecución de su esposa Lisa, el Conde Drácula declara la guerra a toda la humanidad, desatando un ejército de demonios sobre Valaquia. La serie destaca por su madurez narrativa, explorando la compleja relación entre Alucard y su padre, así como la evolución de Sypha Belnades como una poderosa hechicera. Es una obra maestra de la animación gótica moderna.
+            </div>
+            <div class="detalles_tecnicos">
+                <span class="etiqueta_bold">Estreno:</span> 2017 | <span class="etiqueta_bold">Temporadas:</span> 4 | <span class="etiqueta_bold">Estudio:</span> Powerhouse Animation
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_serie">
+        <img src="sa2.png" class="img_serie" alt="CASTLEVANIA NOCTURNE">
+        <div class="info_serie">
+            <span class="nombre_serie">Castlevania: Nocturne</span>
+            <div class="texto_descriptivo">
+                Esta secuela directa se sitúa en el año 1792, durante el apogeo de la Revolución Francesa, y toma como base los eventos de Rondo of Blood. Richter Belmont, el último descendiente joven del legendario clan, debe enfrentar una nueva y terrorífica amenaza: la llegada del Mesías Vampiro. La trama introduce personajes icónicos como Maria Renard y explora las consecuencias del legado Belmont en una era de cambios sociales radicales. Con una animación fluida y una banda sonora intensa, Nocturne define el terror y la acción para una nueva generación de cazadores.
+            </div>
+            <div class="detalles_tecnicos">
+                <span class="etiqueta_bold">Estreno:</span> 2023 | <span class="etiqueta_bold">Temporadas:</span> 2 | <span class="etiqueta_bold">Estudio:</span> Powerhouse Animation
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

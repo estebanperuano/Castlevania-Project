@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronología de Castlevania</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #CCCCCC; 
+            font-family: 'MedievalSharp', cursive; 
+            margin: 0; 
+            padding: 10px; 
+        }
+        .titulo_seccion { 
+            font-size: 22px; 
+            border-bottom: 2px solid #660000; 
+            margin: 30px 0 20px 0; 
+            padding-bottom: 5px; 
+            width: fit-content; 
+            color: #FFFFFF; 
+            
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-bottom: 30px; 
+            table-layout: fixed;
+        }
+        th { 
+            color: #888888; 
+            font-weight: normal; 
+            padding: 15px 5px; 
+            text-align: center; 
+            font-size: 14px; 
+            border-bottom: 1px solid #333; 
+            text-transform: uppercase;
+        }
+        th:nth-child(1), th:nth-child(2) { width: 25%; }
+        th:nth-child(3) { width: 15%; }
+        th:nth-child(4) { width: 35%; }
+
+        td { 
+            padding: 15px 10px; 
+            text-align: center; 
+            vertical-align: middle; 
+            border-bottom: 1px solid #1A1A1A; 
+            word-wrap: break-word;
+        }
+        .celda_juego { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 10px; 
+            min-height: 140px; 
+            justify-content: flex-start; 
+        }
+        .logo_png { 
+            width: 180px; 
+            height: 90px; 
+            object-fit: contain; 
+            filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4));
+            transition: 0.3s;
+        }
+        .logo_png:hover {
+            filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
+            transform: scale(1.05);
+        }
+        .nombre_juego, .japones { 
+            color: #FF4D4D; 
+            font-size: 14px; 
+            margin-top: 5px; 
+            display: block;
+            max-width: 200px;
+        }
+        .guion_vacio { color: #444444; font-size: 18px; }
+
+        
+        @media screen and (max-width: 768px) {
+            .titulo_seccion {
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+                box-sizing: border-box;
+            }
+            
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+
+            thead tr { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                border: 1px solid #333;
+                margin-bottom: 40px;
+                background: #050505;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            td { 
+                border: none;
+                border-bottom: 1px solid #1A1A1A; 
+                position: relative;
+                padding: 15px;
+                width: auto !important;
+                text-align: center;
+            }
+
+            td:nth-of-type(1), td:nth-of-type(2) {
+                background: #0f0f0f;
+            }
+            
+            .celda_juego {
+                min-height: auto;
+                padding: 10px 0;
+            }
+
+            .logo_png {
+                width: 160px;
+            }
+
+            td:nth-of-type(3):before { 
+                content: "Lanzamiento:"; 
+                display: block; 
+                color: #666; 
+                font-size: 12px; 
+                margin-bottom: 5px;
+            }
+            td:nth-of-type(4):before { 
+                content: "Plataformas:"; 
+                display: block; 
+                color: #666; 
+                font-size: 12px; 
+                margin-bottom: 5px;
+            }
+
+            .titulo_seccion:nth-of-type(4) + table td:nth-of-type(2):before { content: "Año:"; }
+            .titulo_seccion:nth-of-type(4) + table td:nth-of-type(3):before { content: "Destino:"; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titulo_seccion">Serie Principal (Canónica)</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Lanzamiento Occidental</th>
+                <th>Lanzamiento Japonés</th>
+                <th>Fecha de Salida</th>
+                <th>Consolas Jugables</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><img src="logo1.png" class="logo_png"><span class="nombre_juego">Castlevania</span></div></td>
+                <td><div class="celda_juego"><img src="jp1.png" class="logo_png"><span class="japones">Akumajō Dracula</span></div></td>
+                <td>26 de septiembre de 1986</td><td>FDS, Famicom, NES, MSX2, PC, GBA, PS1, Wii, 3DS, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo3.png" class="logo_png"><span class="nombre_juego">Castlevania II: Simon's Quest</span></div></td>
+                <td><div class="celda_juego"><img src="jp3.png" class="logo_png"><span class="japones">Dracula II: Noroi no Fūin</span></div></td>
+                <td>28 de agosto de 1987</td><td>FDS, NES, Wii, 3DS, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo5.png" class="logo_png"><span class="nombre_juego">Castlevania: The Adventure</span></div></td>
+                <td><div class="celda_juego"><img src="jp5.png" class="logo_png"><span class="japones">Dracula Densetsu</span></div></td>
+                <td>27 de octubre de 1989</td><td>Game Boy, 3DS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo6.png" class="logo_png"><span class="nombre_juego">Castlevania III: Dracula's Curse</span></div></td>
+                <td><div class="celda_juego"><img src="jp6.png" class="logo_png"><span class="japones">Akumajō Densetsu</span></div></td>
+                <td>22 de diciembre de 1989</td><td>Famicom, NES, Wii, 3DS, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo8.png" class="logo_png"><span class="nombre_juego">Castlevania II: Belmont's Revenge</span></div></td>
+                <td><div class="celda_juego"><img src="jp8.png" class="logo_png"><span class="japones">Dracula Densetsu II</span></div></td>
+                <td>12 de julio de 1991</td><td>Game Boy, 3DS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="jp10.png" class="logo_png"><span class="japones">Akumajō Dracula X: Chi no Rondo</span></div></td>
+                <td>29 de octubre de 1993</td><td>PC Engine CD, Wii</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo11.png" class="logo_png"><span class="nombre_juego">Castlevania: Bloodlines</span></div></td>
+                <td><div class="celda_juego"><img src="jp11.png" class="logo_png"><span class="japones">Vampire Killer</span></div></td>
+                <td>17 de marzo de 1994</td><td>Mega Drive, Genesis</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo13.png" class="logo_png"><span class="nombre_juego">Castlevania: Symphony of the Night</span></div></td>
+                <td><div class="celda_juego"><img src="jp13.png" class="logo_png"><span class="japones">Akumajō Dracula X: Gekka no Yasōkyoku</span></div></td>
+                <td>20 de marzo de 1997</td><td>PS1, Saturn, Xbox 360, PS3, PSP, PS Vita</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo19.png" class="logo_png"><span class="nombre_juego">Castlevania: Harmony of Dissonance</span></div></td>
+                <td><div class="celda_juego"><img src="jp19.png" class="logo_png"><span class="japones">Byakuya no Concerto</span></div></td>
+                <td>6 de junio de 2002</td><td>GBA, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo20.png" class="logo_png"><span class="nombre_juego">Castlevania: Aria of Sorrow</span></div></td>
+                <td><div class="celda_juego"><img src="jp20.png" class="logo_png"><span class="japones">Akatsuki no Minuet</span></div></td>
+                <td>6 de mayo de 2003</td><td>GBA, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo21.png" class="logo_png"><span class="nombre_juego">Castlevania: Lament of Innocence</span></div></td>
+                <td><div class="celda_juego"><img src="jp21.png" class="logo_png"><span class="japones">Castlevania</span></div></td>
+                <td>21 de octubre de 2003</td><td>PS2, PS3</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo22.png" class="logo_png"><span class="nombre_juego">Castlevania: Dawn of Sorrow</span></div></td>
+                <td><div class="celda_juego"><img src="jp22.png" class="logo_png"><span class="japones">Akumajō Dracula: Sōgetsu no Jūjika</span></div></td>
+                <td>25 de agosto de 2005</td><td>Nintendo DS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo23.png" class="logo_png"><span class="nombre_juego">Castlevania: Curse of Darkness</span></div></td>
+                <td><div class="celda_juego"><img src="jp23.png" class="logo_png"><span class="japones">Akumajō Dracula: Yami no Juin</span></div></td>
+                <td>1 de noviembre de 2005</td><td>PS2, Xbox</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo24.png" class="logo_png"><span class="nombre_juego">Castlevania: Portrait of Ruin</span></div></td>
+                <td><div class="celda_juego"><img src="jp24.png" class="logo_png"><span class="japones">Akumajō Dracula: Gallery of Labyrinth</span></div></td>
+                <td>16 de noviembre de 2006</td><td>Nintendo DS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo27.png" class="logo_png"><span class="nombre_juego">Castlevania: Order of Ecclesia</span></div></td>
+                <td><div class="celda_juego"><img src="jp27.png" class="logo_png"><span class="japones">Akumajō Dracula: Ubawareta Kokuin</span></div></td>
+                <td>21 de octubre de 2008</td><td>Nintendo DS</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="titulo_seccion">Juegos No Canónicos</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Lanzamiento Occidental</th>
+                <th>Lanzamiento Japonés</th>
+                <th>Fecha de Salida</th>
+                <th>Consolas Jugables</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><img src="logo2.png" class="logo_png"><span class="nombre_juego">Vampire Killer</span></div></td>
+                <td><div class="celda_juego"><img src="jp2.png" class="logo_png"><span class="japones">Akumajō Dracula</span></div></td>
+                <td>30 de octubre de 1986</td><td>MSX2, Wii</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo7.png" class="logo_png"><span class="nombre_juego">Super Castlevania IV</span></div></td>
+                <td><div class="celda_juego"><img src="jp7.png" class="logo_png"><span class="japones">Akumajō Dracula</span></div></td>
+                <td>31 de octubre de 1991</td><td>SFC, SNES, Wii, Wii U, 3DS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="jp9.png" class="logo_png"><span class="japones">Akumajō Dracula</span></div></td>
+                <td>23 de julio de 1993</td><td>Sharp X68000</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo12.png" class="logo_png"><span class="nombre_juego">Castlevania: Dracula X</span></div></td>
+                <td><div class="celda_juego"><img src="jp12.png" class="logo_png"><span class="japones">Akumajō Dracula XX</span></div></td>
+                <td>21 de julio de 1995</td><td>SFC, SNES, Wii U, 3DS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo14.png" class="logo_png"><span class="nombre_juego">Castlevania Legends</span></div></td>
+                <td><div class="celda_juego"><img src="jp14.png" class="logo_png"><span class="japones">Akumajō Dracula: Shikkoku taru Zensōkyoku</span></div></td>
+                <td>27 de noviembre de 1997</td><td>Game Boy</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo15.png" class="logo_png"><span class="nombre_juego">Castlevania 64</span></div></td>
+                <td><div class="celda_juego"><img src="jp15.png" class="logo_png"><span class="japones">Akumajō Dracula Mokushiroku</span></div></td>
+                <td>11 de marzo de 1999</td><td>Nintendo 64</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo16.png" class="logo_png"><span class="nombre_juego">Castlevania: Legacy of Darkness</span></div></td>
+                <td><div class="celda_juego"><img src="jp16.png" class="logo_png"><span class="japones">Akumajō Dracula Mokushiroku Gaiden</span></div></td>
+                <td>30 de noviembre de 1999</td><td>Nintendo 64</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo18.png" class="logo_png"><span class="nombre_juego">Castlevania: Circle of the Moon</span></div></td>
+                <td><div class="celda_juego"><img src="jp18.png" class="logo_png"><span class="japones">Akumajō Dracula</span></div></td>
+                <td>21 de marzo de 2001</td><td>GBA, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo17.png" class="logo_png"><span class="nombre_juego">Castlevania Chronicles</span></div></td>
+                <td><div class="celda_juego"><img src="jp17.png" class="logo_png"><span class="japones">Akumajō Nendaiki: Akumajō Dracula</span></div></td>
+                <td>24 de mayo de 2001</td><td>PS1, PS3, PSP, PS Vita</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo25.png" class="logo_png"><span class="nombre_juego">Castlevania: Order of Shadows</span></div></td>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td>18 de septiembre de 2007</td><td>Mobile (Java ME)</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo26.png" class="logo_png"><span class="nombre_juego">Castlevania: The Dracula X Chronicles</span></div></td>
+                <td><div class="celda_juego"><img src="jp26.png" class="logo_png"><span class="japones">Akumajō Dracula X Chronicles</span></div></td>
+                <td>23 de octubre de 2007</td><td>PSP, PS Vita</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo28.png" class="logo_png"><span class="nombre_juego">Castlevania Judgment</span></div></td>
+                <td><div class="celda_juego"><img src="jp28.png" class="logo_png"><span class="japones">Castlevania Judgment</span></div></td>
+                <td>18 de noviembre de 2008</td><td>Wii</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo29.png" class="logo_png"><span class="nombre_juego">Castlevania: The Adventure ReBirth</span></div></td>
+                <td><div class="celda_juego"><img src="jp29.png" class="logo_png"><span class="japones">Dracula Densetsu ReBirth</span></div></td>
+                <td>27 de octubre de 2009</td><td>WiiWare</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra2.png" class="logo_png"><span class="nombre_juego">Castlevania Puzzle: Encore of the Night</span></div></td>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td>14 de julio de 2010</td><td>iOS</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo30.png" class="logo_png"><span class="nombre_juego">Castlevania: Harmony of Despair</span></div></td>
+                <td><div class="celda_juego"><img src="jp30.png" class="logo_png"><span class="japones">Akumajō Dracula: Harmony of Despair</span></div></td>
+                <td>4 de agosto de 2010</td><td>Xbox 360, PS3</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra3.png" class="logo_png"><span class="nombre_juego">Castlevania: Grimoire of Souls</span></div></td>
+                <td><div class="celda_juego"><img src="extra4.png" class="logo_png"><span class="japones">Akumajō Dracula: Grimoire of Souls</span></div></td>
+                <td>17 de septiembre de 2019</td><td>iOS, Android</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="titulo_seccion">Arcade, Pachislot & Medal Games</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Lanzamiento Occidental</th>
+                <th>Lanzamiento Japonés</th>
+                <th>Fecha de Salida</th>
+                <th>Consolas / Sistema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><img src="logo4.png" class="logo_png"><span class="nombre_juego">Haunted Castle</span></div></td>
+                <td><div class="celda_juego"><img src="jp4.png" class="logo_png"><span class="japones">Akumajō Dracula</span></div></td>
+                <td>Febrero de 1988</td><td>Arcade, PS2, PS4, Switch</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra1.png" class="logo_png"><span class="japones">Akumajō Dracula: The Arcade</span></div></td>
+                <td>2 de octubre de 2008</td><td>Arcade</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra20.png" class="logo_png"><span class="japones">Pachislot Akumajō Dracula</span></div></td>
+                <td>5 de enero de 2009</td><td>Pachislot</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra19.png" class="logo_png"><span class="japones">The Medal</span></div></td>
+                <td>2009</td><td>Medal Game</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra21.png" class="logo_png"><span class="japones">Pachislot Akumajō Dracula II</span></div></td>
+                <td>19 de julio de 2010</td><td>Pachislot</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra22.png" class="logo_png"><span class="japones">Pachislot Akumajō Dracula III</span></div></td>
+                <td>Febrero de 2012</td><td>Pachislot</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra23.png" class="logo_png"><span class="japones">CR Akumajō Dracula</span></div></td>
+                <td>19 de octubre de 2015</td><td>Pachinko</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="titulo_seccion">Proyectos Cancelados</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Juego</th>
+                <th>Año de Cancelación</th>
+                <th>Plataforma Destino</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><img src="bloodletting.png" class="logo_png"><span class="nombre_juego">Castlevania: The Bloodletting</span></div></td>
+                <td>1996</td><td>Sega 32X</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra7.png" class="logo_png"><span class="nombre_juego">Castlevania Resurrection</span></div></td>
+                <td>1999</td><td>Sega Dreamcast</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="titulo_seccion">Kid Dracula & Spin-offs</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Lanzamiento Occidental</th>
+                <th>Lanzamiento Japonés</th>
+                <th>Fecha de Salida</th>
+                <th>Consolas Jugables</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra8.png" class="logo_png"><span class="japones">Konami Wai Wai World</span></div></td>
+                <td>14 de enero de 1988</td><td>Famicom</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra10.png" class="logo_png"><span class="japones">Akumajō Special: Boku Dracula-kun</span></div></td>
+                <td>19 de octubre de 1990</td><td>Famicom, Móviles</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><span class="guion_vacio">-</span></div></td>
+                <td><div class="celda_juego"><img src="extra9.png" class="logo_png"><span class="japones">Wai Wai World 2: SOS!! Parsley Jō</span></div></td>
+                <td>5 de enero de 1991</td><td>Famicom, Wii U</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra11.png" class="logo_png"><span class="nombre_juego">Kid Dracula</span></div></td>
+                <td><div class="celda_juego"><img src="extra12.png" class="logo_png"><span class="japones">Akumajō Special: Boku Dracula-kun</span></div></td>
+                <td>3 de enero de 1993</td><td>Game Boy</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra17.png" class="logo_png"><span class="nombre_juego">Konami Krazy Racing</span></div></td>
+                <td><div class="celda_juego"><img src="extra18.png" class="logo_png"><span class="japones">Konami Wai Wai Racing Advance</span></div></td>
+                <td>21 de marzo de 2001</td><td>GBA, iOS, Android</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="titulo_seccion">Reinicio: Saga Lords of Shadow</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Lanzamiento Occidental</th>
+                <th>Lanzamiento Japonés</th>
+                <th>Fecha de Salida</th>
+                <th>Consolas Jugables</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><img src="logo31.png" class="logo_png"><span class="nombre_juego">Castlevania: Lords of Shadow</span></div></td>
+                <td><div class="celda_juego"><img src="jp31.png" class="logo_png"><span class="japones">Castlevania: Lords of Shadow</span></div></td>
+                <td>5 de octubre de 2010</td><td>PS3, Xbox 360, PC</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="logo32.png" class="logo_png"><span class="nombre_juego">Castlevania: Lords of Shadow - Mirror of Fate</span></div></td>
+                <td><div class="celda_juego"><img src="jp32.png" class="logo_png"><span class="japones">Castlevania: Lords of Shadow - Sadame no Makyoku</span></div></td>
+                <td>5 de marzo de 2013</td><td>Nintendo 3DS, PS3, Xbox 360, PC</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra5.png" class="logo_png"><span class="nombre_juego">Castlevania: Lords of Shadow 2</span></div></td>
+                <td><div class="celda_juego"><img src="extra6.png" class="logo_png"><span class="japones">Castlevania: Lords of Shadow 2</span></div></td>
+                <td>25 de febrero de 2014</td><td>PS3, Xbox 360, PC</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="titulo_seccion">Colecciones</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Título de la Colección</th>
+                <th>Fecha de Salida</th>
+                <th>Plataformas Disponibles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="celda_juego"><img src="extra13.png" class="logo_png"><span class="nombre_juego">Castlevania Requiem: SotN & RoB</span></div></td>
+                <td>26 de octubre de 2018</td><td>PS4, PS5</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra14.png" class="logo_png"><span class="nombre_juego">Castlevania Anniversary Collection</span></div></td>
+                <td>16 de mayo de 2019</td><td>PS4, Switch, Xbox One, PC</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra15.png" class="logo_png"><span class="nombre_juego">Castlevania Advance Collection</span></div></td>
+                <td>23 de septiembre de 2021</td><td>PS4, Switch, Xbox One, PC</td>
+            </tr>
+            <tr>
+                <td><div class="celda_juego"><img src="extra16.png" class="logo_png"><span class="nombre_juego">Castlevania Dominus Collection</span></div></td>
+                <td>27 de agosto de 2024</td><td>PS5, Switch, Xbox Series X/S, PC</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
